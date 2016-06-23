@@ -2,7 +2,7 @@
 A simple description and sample of creating a global low level keyboard And Mouse hook in C#
 
 # Introduction
-Keyboard MouseHooks C# Library is part of for .NET developers. It enables you, in a very easy, optimized and OO-way, via C# events system to install and track low level Windows keyboard and Mouse hooks. Library consists of two separate classes (KeyboardHook and MouseHook). Check KeyboardMouseHook.zip application to see all of its features.
+Keyboard MouseHooks C# Library is part of for .NET developers. It enables you via C# events system to install and track low level Windows keyboard and Mouse hooks.
 
 # Background
 I've found a lot of hook and simulator code out there, but a lot of it was not very organized, and a bit hard to use. The goal here is to make a very simple and easy-to-use library for mouse and keyboard operations not natively supported by .NET.
@@ -22,13 +22,7 @@ KeyboardHook keyboardHook = new KeyboardHook();
 
 > // Capture the events
 > mouseHook.MouseMove += new MouseHook.MouseHookCallback(mouseHook_MouseMove);
-> mouseHook.LeftButtonDown += new MouseHook.MouseHookCallback(mouseHook_LeftButtonDown);
-> mouseHook.LeftButtonUp += new MouseHook.MouseHookCallback(mouseHook_LeftButtonUp);
-> mouseHook.RightButtonDown += new MouseHook.MouseHookCallback(mouseHook_RightButtonDown);
-> mouseHook.RightButtonUp += new MouseHook.MouseHookCallback(mouseHook_RightButtonUp);
-> mouseHook.MiddleButtonDown += new MouseHook.MouseHookCallback(mouseHook_MiddleButtonDown);
-> mouseHook.MiddleButtonUp += new MouseHook.MouseHookCallback(mouseHook_MiddleButtonUp);
-> mouseHook.MouseWheel += new MouseHook.MouseHookCallback(mouseHook_MouseWheel);
+
 
 > //Installing the Mouse Hooks
 > mouseHook.Install();
@@ -72,13 +66,6 @@ private void OnApplicationExit(object sender, EventArgs e)
  keyboardHook.KeyUp -= new KeyboardHook.KeyboardHookCallback(keyboardHook_KeyUp);
  keyboardHook.Uninstall();
  mouseHook.MouseMove -= new MouseHook.MouseHookCallback(mouseHook_MouseMove);
- mouseHook.LeftButtonDown -= new MouseHook.MouseHookCallback(mouseHook_LeftButtonDown);
- mouseHook.LeftButtonUp -= new MouseHook.MouseHookCallback(mouseHook_LeftButtonUp);
- mouseHook.RightButtonDown -= new MouseHook.MouseHookCallback(mouseHook_RightButtonDown);
- mouseHook.RightButtonUp -= new MouseHook.MouseHookCallback(mouseHook_RightButtonUp);
- mouseHook.MiddleButtonDown -= new MouseHook.MouseHookCallback(mouseHook_MiddleButtonDown);
- mouseHook.MiddleButtonUp -= new MouseHook.MouseHookCallback(mouseHook_MiddleButtonUp);
- mouseHook.MouseWheel -= new MouseHook.MouseHookCallback(mouseHook_MouseWheel);
- mouseHook.Uninstall();
+  mouseHook.Uninstall();
  }
  ```
