@@ -43,11 +43,11 @@ Using the Keyboard Hook:
 ```
 private void keyboardHook_KeyUp(KeyboardHook.VKeys key)
 {
- SetText("[" + DateTime.Now.ToLongTimeString() + "] KeyUp Event {" + key.ToString() + "}");
+ Console.WriteLine("[" + DateTime.Now.ToLongTimeString() + "] KeyUp Event {" + key.ToString() + "}");
 } 
 private void keyboardHook_KeyDown(KeyboardHook.VKeys key) 
 { 
- SetText("[" + DateTime.Now.ToLongTimeString() + "] KeyDown Event {" + key.ToString() + "}" ); 
+ Console.WriteLine("[" + DateTime.Now.ToLongTimeString() + "] KeyDown Event {" + key.ToString() + "}" ); 
 }
 ```
 
