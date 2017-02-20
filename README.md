@@ -20,20 +20,20 @@ MouseHook mouseHook = new MouseHook();
 // Create the Keyboard Hook
 KeyboardHook keyboardHook = new KeyboardHook();
 
-> // Capture the events
-> mouseHook.MouseMove += new MouseHook.MouseHookCallback(mouseHook_MouseMove);
+ // Capture the events
+ mouseHook.MouseMove += new MouseHook.MouseHookCallback(mouseHook_MouseMove);
 
 
-> //Installing the Mouse Hooks
-> mouseHook.Install();
+ //Installing the Mouse Hooks
+ mouseHook.Install();
 Using the Keyboard Hook:
 
-> // Capture the events
-> keyboardHook.KeyDown += new KeyboardHook.KeyboardHookCallback(keyboardHook_KeyDown);
-> keyboardHook.KeyUp += new KeyboardHook.KeyboardHookCallback(keyboardHook_KeyUp);
+ // Capture the events
+ keyboardHook.KeyDown += new KeyboardHook.KeyboardHookCallback(keyboardHook_KeyDown);
+ keyboardHook.KeyUp += new KeyboardHook.KeyboardHookCallback(keyboardHook_KeyUp);
 
-> //Installing the Keyboard Hooks
-> keyboardHook.Install();
+ //Installing the Keyboard Hooks
+ keyboardHook.Install();
 ```
 
 ```keyboardHook.KeyDown +=```
