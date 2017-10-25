@@ -7,7 +7,7 @@ namespace GlobalLowLevelHooks
     /// <summary>
     /// Class for intercepting low level Windows mouse hooks.
     /// </summary>
-    class MouseHook
+    public class MouseHook
     {
         /// <summary>
         /// Internal callback processing function
